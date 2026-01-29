@@ -110,7 +110,7 @@ https://fontawesome.com/icons?d=gallery */
     {
     skillName: "docker",
     fontAwesomeClassname: "fab fa-docker"
-  }
+  },
     {
     skillName: "redux / ngrx",
     fontAwesomeClassname: "fas fa-project-diagram"
