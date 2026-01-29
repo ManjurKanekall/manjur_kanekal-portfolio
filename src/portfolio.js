@@ -438,4 +438,5 @@ export {
   isHireable,
   resumeSection
 };
-export const resumeLink = "pubic/resume/Manjur_Kanekal_Resume.pdf";
+export const resumeLink = "/resume/Manjur_Kanekal_Resume.pdf";
+
