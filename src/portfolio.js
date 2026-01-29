@@ -147,7 +147,7 @@ const educationInfo = {
       schoolName: "University of North Texas",
       logo: require("./assets/images/UNT.png"),
       subHeader: "Master of Science in Computer Science",
-      duration: "January 2023 - December 2024",
+      //duration: "January 2023 - December 2024",
       // desc: "Focused on software development and web technologies.",
       // descBullets: [
       //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
@@ -159,7 +159,7 @@ const educationInfo = {
       schoolName: "Lovely Professional University",
       logo: require("./assets/images/LPU.png"),
       subHeader: "Bachelor of Technology in Computer Science",
-      duration: "August 2016 - August 2020",
+      //duration: "August 2016 - August 2020",
       // desc: "Bachelor’s in Computer Science from Lovely Professional University (LPU), ranked 31st among all universities in India (NIRF 2025). Built a strong foundation in Software Engineering, Web Development, Operating Systems, Databases, and problem-solving through hands-on coursework and academic projects.",
       // descBullets: [
       //   "Ranked 31st among all universities in India (NIRF 2025)",
