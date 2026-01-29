@@ -45,7 +45,7 @@ const socialMediaLinks = {
 
 const skillsSection = {
   title: "What I do",
-  subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
+  subTitle: "FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
   skills: [
     emoji(
       "⚡ Build responsive and high-performance UI using React and Angular"
@@ -66,6 +66,60 @@ const skillsSection = {
 https://fontawesome.com/icons?d=gallery */
 
  softwareSkills: [
+
+   {
+    skillName: "React",
+    fontAwesomeClassname: "fab fa-react"
+  },
+  {
+    skillName: "Angular",
+    fontAwesomeClassname: "fab fa-angular"
+  },
+   {
+    skillName: "Java",
+    fontAwesomeClassname: "fab fa-java"
+  },
+  {
+    skillName: "Spring Boot",
+    fontAwesomeClassname: "fas fa-leaf"
+  },
+      {
+    skillName: "aws",
+    fontAwesomeClassname: "fab fa-aws"
+  },
+    {
+    skillName: "postgresql / mysql",
+    fontAwesomeClassname: "fas fa-database"
+  },
+    {
+    skillName: "JavaScript",
+    fontAwesomeClassname: "fab fa-js"
+  },
+  {
+    skillName: "REST APIs",
+    fontAwesomeClassname: "fas fa-network-wired"
+  },
+    {
+    skillName: "WebSockets",
+    fontAwesomeClassname: "fas fa-exchange-alt"
+  },
+    {
+    skillName: "TypeScript",
+    fontAwesomeClassname: "fab fa-js"
+  },
+    {
+    skillName: "docker",
+    fontAwesomeClassname: "fab fa-docker"
+  }
+    {
+    skillName: "redux / ngrx",
+    fontAwesomeClassname: "fas fa-project-diagram"
+  },
+ 
+  {
+    skillName: "redis",
+    fontAwesomeClassname: "fas fa-database"
+  },
   {
     skillName: "html-5",
     fontAwesomeClassname: "fab fa-html5"
@@ -78,58 +132,7 @@ https://fontawesome.com/icons?d=gallery */
     skillName: "sass",
     fontAwesomeClassname: "fab fa-sass"
   },
-  {
-    skillName: "JavaScript",
-    fontAwesomeClassname: "fab fa-js"
-  },
-  {
-    skillName: "TypeScript",
-    fontAwesomeClassname: "fab fa-js"
-  },
-  {
-    skillName: "reactjs",
-    fontAwesomeClassname: "fab fa-react"
-  },
-  {
-    skillName: "angular",
-    fontAwesomeClassname: "fab fa-angular"
-  },
-  {
-    skillName: "redux / ngrx",
-    fontAwesomeClassname: "fas fa-project-diagram"
-  },
-  {
-    skillName: "java",
-    fontAwesomeClassname: "fab fa-java"
-  },
-  {
-    skillName: "spring boot",
-    fontAwesomeClassname: "fas fa-leaf"
-  },
-  {
-    skillName: "REST APIs",
-    fontAwesomeClassname: "fas fa-network-wired"
-  },
-  {
-    skillName: "WebSockets",
-    fontAwesomeClassname: "fas fa-exchange-alt"
-  },
-  {
-    skillName: "redis",
-    fontAwesomeClassname: "fas fa-database"
-  },
-  {
-    skillName: "postgresql / mysql",
-    fontAwesomeClassname: "fas fa-database"
-  },
-  {
-    skillName: "aws",
-    fontAwesomeClassname: "fab fa-aws"
-  },
-  {
-    skillName: "docker",
-    fontAwesomeClassname: "fab fa-docker"
-  }
+
 ],
 
   display: true // Set false to hide this section, defaults to true
