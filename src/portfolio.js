@@ -130,7 +130,7 @@ https://fontawesome.com/icons?d=gallery */
     skillName: "docker",
     fontAwesomeClassname: "fab fa-docker"
   }
-]
+],
 
   display: true // Set false to hide this section, defaults to true
 };
