@@ -20,26 +20,22 @@ const illustration = {
 };
 
 const greeting = {
-  username: "Saad Pasta",
-  title: "Hi all, I'm Saad",
+  username: "Manjur Kanekal",
+  title: "Hi all, I'm Manjur ",
   subTitle: emoji(
-    "A passionate Full Stack Software Developer 🚀 having an experience of building Web and Mobile applications with JavaScript / Reactjs / Nodejs / React Native and some other cool libraries and frameworks."
+    "Full Stack Software Developer 🚀 with 6+ years of experience building scalable web applications using React, Angular, Java, Spring Boot, and cloud technologies like AWS."
   ),
-  resumeLink:
-    "https://drive.google.com/file/d/1ofFdKF_mqscH8WvXkSObnVvC9kK7Ldlu/view?usp=sharing", // Set to empty to hide the button
-  displayGreeting: true // Set false to hide this section, defaults to true
+  resumeLink: "PASTE_YOUR_GOOGLE_DRIVE_RESUME_LINK_HERE",
+  displayGreeting: true
 };
+
 
 // Social Media Links
 
 const socialMediaLinks = {
-  github: "https://github.com/saadpasta",
-  linkedin: "https://www.linkedin.com/in/saadpasta/",
-  gmail: "saadpasta70@gmail.com",
-  gitlab: "https://gitlab.com/saadpasta",
-  facebook: "https://www.facebook.com/saad.pasta7",
-  medium: "https://medium.com/@saadpasta",
-  stackoverflow: "https://stackoverflow.com/users/10422806/saad-pasta",
+  github: "https://leetcode.com/u/Manjur_Kanekal/",
+  linkedin: "https://www.linkedin.com/in/manjur-k/",
+  gmail: "kanekalmanjur40@gmail.com",
   // Instagram, Twitter and Kaggle are also supported in the links!
   // To customize icons and social links, tweak src/components/SocialMedia
   display: true // Set true to display this section, defaults to false
@@ -52,11 +48,17 @@ const skillsSection = {
   subTitle: "CRAZY FULL STACK DEVELOPER WHO WANTS TO EXPLORE EVERY TECH STACK",
   skills: [
     emoji(
-      "⚡ Develop highly interactive Front end / User Interfaces for your web and mobile applications"
+      "⚡ Build responsive and high-performance UI using React and Angular"
     ),
-    emoji("⚡ Progressive Web Applications ( PWA ) in normal and SPA Stacks"),
+    emoji("⚡ Develop backend services using Java and Spring Boot"),
     emoji(
-      "⚡ Integration of third party services such as Firebase/ AWS / Digital Ocean"
+      "⚡ Design and integrate REST APIs"
+    ),
+        emoji(
+      "⚡ Work with AWS, Docker, and CI/CD pipelines"
+    ),
+            emoji(
+      "⚡ Collaborate in Agile/Scrum environments"
     )
   ],
 
@@ -126,23 +128,28 @@ const educationInfo = {
   display: true, // Set false to hide this section, defaults to true
   schools: [
     {
-      schoolName: "Harvard University",
-      logo: require("./assets/images/harvardLogo.png"),
+      schoolName: "University of North Texas",
+      logo: require("./assets/images/UNT.png"),
       subHeader: "Master of Science in Computer Science",
-      duration: "September 2017 - April 2019",
-      desc: "Participated in the research of XXX and published 3 papers.",
-      descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
+      duration: "January 2023 - December 2024",
+      // desc: "Focused on software development and web technologies.",
+      // descBullets: [
+      //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
+      //   "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
+      // ]
     },
+
     {
-      schoolName: "Stanford University",
-      logo: require("./assets/images/stanfordLogo.png"),
-      subHeader: "Bachelor of Science in Computer Science",
-      duration: "September 2013 - April 2017",
-      desc: "Ranked top 10% in the program. Took courses about Software Engineering, Web Security, Operating Systems, ...",
-      descBullets: ["Lorem ipsum dolor sit amet, consectetur adipiscing elit"]
+      schoolName: "Lovely Professional University",
+      logo: require("./assets/images/LPU.png"),
+      subHeader: "Bachelor of Technology in Computer Science",
+      duration: "August 2016 - August 2020",
+      // desc: "Bachelor’s in Computer Science from Lovely Professional University (LPU), ranked 31st among all universities in India (NIRF 2025). Built a strong foundation in Software Engineering, Web Development, Operating Systems, Databases, and problem-solving through hands-on coursework and academic projects.",
+      // descBullets: [
+      //   "Ranked 31st among all universities in India (NIRF 2025)",
+      //   "Strong fundamentals in Computer Science and Software Engineering",
+      //   "Hands-on experience through projects and practical coursework"
+      // ]
     }
   ]
 };
@@ -173,31 +180,41 @@ const techStack = {
 const workExperiences = {
   display: true, //Set it to true to show workExperiences Section
   experience: [
+{
+  role: "Software Developer",
+  company: "Texas Health Resources",
+  companylogo: require("./assets/images/ths.png"),
+  date: "Feb 2024 – Present",
+  desc: "Worked on the MyChart Patient Portal, a large-scale healthcare application used by patients and clinicians.",
+  descBullets: [
+    "Built patient-facing UI features using React and Redux Toolkit for secure access to medical data",
+    "Developed and integrated Java Spring Boot REST and WebSocket services on AWS for real-time updates",
+    "Improved performance, accessibility, and reliability while collaborating in an Agile, HIPAA-compliant environment"
+  ]
+}
+,
     {
-      role: "Software Engineer",
-      company: "Facebook",
-      companylogo: require("./assets/images/facebookLogo.png"),
-      date: "June 2018 – Present",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.",
+      role: "Software Developer",
+      company: "Antier Solutions",
+      companylogo: require("./assets/images/antier.jpg"),
+      date: "July 2020 – Dec 2022",
+      desc: "Worked on fintech applications focused on digital wallet dashboards and transaction monitoring systems.",
       descBullets: [
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit",
-        "Lorem ipsum dolor sit amet, consectetur adipiscing elit"
-      ]
-    },
+      "Built interactive wallet dashboards using Angular, TypeScript, RxJS, and NgRx for real-time transaction views",
+      "Developed Java Spring Boot REST APIs to support wallet operations, transaction history, and account workflows",
+      "Integrated WebSocket-based updates, Redis caching, and AWS services to improve performance and scalability"
+  ]    },
     {
-      role: "Front-End Developer",
-      company: "Quora",
-      companylogo: require("./assets/images/quoraLogo.png"),
-      date: "May 2017 – May 2018",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    },
-    {
-      role: "Software Engineer Intern",
-      company: "Airbnb",
-      companylogo: require("./assets/images/airbnbLogo.png"),
-      date: "Jan 2015 – Sep 2015",
-      desc: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
-    }
+      role: "Software Developer",
+      company: "MPS Infotech",
+      companylogo: require("./assets/images/mps.jpg"),
+      date: "Dec 2018 – Jun 2020",
+      desc: "Worked on modernizing an educational content and learning management platform for academic publishers.",
+      descBullets: [
+      "Migrated legacy JSP-based modules to Angular, building modular and responsive user interfaces",
+      "Developed Java Spring Boot REST APIs for course delivery, progress tracking, and reporting workflows",
+      "Deployed and maintained applications using AWS EC2, S3, and RDS to support scalable content delivery"
+  ]    }
   ]
 };
 
@@ -206,7 +223,7 @@ To know how to get github key look at readme.md */
 
 const openSource = {
   showGithubProfile: "true", // Set true or false to show Contact profile using Github, defaults to true
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Some big projects you have worked on
@@ -239,7 +256,7 @@ const bigProjects = {
       ]
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Achievement Section
@@ -252,51 +269,50 @@ const achievementSection = {
 
   achievementsCards: [
     {
-      title: "Google Code-In Finalist",
-      subtitle:
-        "First Pakistani to be selected as Google Code-in Finalist from 4000 students from 77 different countries.",
-      image: require("./assets/images/codeInLogo.webp"),
-      imageAlt: "Google Code-In Logo",
+      title: "AWS Certified Developer Associate",
+      subtitle: "Completed Certifcation from AWS for Developer Associate",
+      image: require("./assets/images/aws.png"),
+      imageAlt: "AWS Logo",
       footerLink: [
-        {
-          name: "Certification",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
-        },
-        {
-          name: "Award Letter",
-          url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
-        },
-        {
-          name: "Google Code-in Blog",
-          url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
-        }
+        //{
+          //name: "Certification",
+          //url: "https://drive.google.com/file/d/0B7kazrtMwm5dYkVvNjdNWjNybWJrbndFSHpNY2NFV1p4YmU0/view?usp=sharing"
+        //},
+        //{
+          //name: "Award Letter",
+          //url: "https://drive.google.com/file/d/0B7kazrtMwm5dekxBTW5hQkg2WXUyR3QzQmR0VERiLXlGRVdF/view?usp=sharing"
+        //},
+        //{
+          //name: "Google Code-in Blog",
+          //url: "https://opensource.googleblog.com/2019/01/google-code-in-2018-winners.html"
+        //}
       ]
     },
-    {
-      title: "Google Assistant Action",
-      subtitle:
-        "Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
-      image: require("./assets/images/googleAssistantLogo.webp"),
-      imageAlt: "Google Assistant Action Logo",
-      footerLink: [
-        {
-          name: "View Google Assistant Action",
-          url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
-        }
-      ]
-    },
+    //{
+      //title: "Google Assistant Action",
+      //subtitle:
+        //"Developed a Google Assistant Action JavaScript Guru that is available on 2 Billion devices world wide.",
+      //image: require("./assets/images/googleAssistantLogo.webp"),
+      //imageAlt: "Google Assistant Action Logo",
+      //footerLink: [
+        //{
+          //name: "View Google Assistant Action",
+          //url: "https://assistant.google.com/services/a/uid/000000100ee688ee?hl=en"
+        //}
+      //]
+    //},
 
     {
-      title: "PWA Web App Developer",
-      subtitle: "Completed Certifcation from SMIT for PWA Web App Development",
-      image: require("./assets/images/pwaLogo.webp"),
-      imageAlt: "PWA Logo",
+      title: "Meta Certified Frontend Developer",
+      subtitle: "Completed Certifcation from Meta for Front-end Development",
+      image: require("./assets/images/meta.png"),
+      imageAlt: "Meta logo",
       footerLink: [
-        {name: "Certification", url: ""},
-        {
-          name: "Final Project",
-          url: "https://pakistan-olx-1.firebaseapp.com/"
-        }
+        //{name: "Certification", url: ""},
+        //{
+          //name: "Final Project",
+          //url: "https://pakistan-olx-1.firebaseapp.com/"
+        //}
       ]
     }
   ],
@@ -324,7 +340,7 @@ const blogSection = {
         "React is a JavaScript library for building User Interface. It is maintained by Facebook and a community of individual developers and companies."
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Talks Sections
@@ -343,7 +359,7 @@ const talkSection = {
       event_url: "https://www.facebook.com/events/2339906106275053/"
     }
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Podcast Section
@@ -356,7 +372,7 @@ const podcastSection = {
   podcast: [
     "https://anchor.fm/codevcast/embed/episodes/DevStory---Saad-Pasta-from-Karachi--Pakistan-e9givv/a-a15itvo"
   ],
-  display: true // Set false to hide this section, defaults to true
+  display: false // Set false to hide this section, defaults to true
 };
 
 // Resume Section
@@ -369,18 +385,19 @@ const resumeSection = {
 };
 
 const contactInfo = {
-  title: emoji("Contact Me ☎️"),
-  subtitle:
-    "Discuss a project or just want to say hi? My Inbox is open for all.",
-  number: "+92-0000000000",
-  email_address: "saadpasta70@gmail.com"
+  title: emoji("Reach Out to me!"),
+subtitle:
+  "Actively seeking Software and Full Stack Developer opportunities. Feel free to reach out for roles, collaborations, or discussions.",
+  email_address: "kanekalmanjur40@gmail.com",
+  number: "Software Developer | Full Stack",
+  number1: "Open for Opportunities - Yes",
 };
 
 // Twitter Section
 
 const twitterDetails = {
   userName: "twitter", //Replace "twitter" with your twitter username without @
-  display: true // Set true to display this section, defaults to false
+  display: false // Set true to display this section, defaults to false
 };
 
 const isHireable = false; // Set false if you are not looking for a job. Also isHireable will be display as Open for opportunities: Yes/No in the GitHub footer
@@ -405,3 +422,4 @@ export {
   isHireable,
   resumeSection
 };
+export const resumeLink = "/resume/Manjur_Kanekal_Resume.pdf";

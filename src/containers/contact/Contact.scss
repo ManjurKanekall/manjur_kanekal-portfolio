@@ -33,8 +33,15 @@
   transition: all 0.3s;
 }
 
+.dark-mode .contact-subtitle {
+  color: #e6e6e6;
+}
 .contact-subtitle {
+  color: #2d2d2d;   // darker text
+  font-weight: 600; // semi-bold
+  font-size: 1.1rem;
   text-transform: uppercase;
+
 }
 
 .contact-text-div {
@@ -84,4 +91,16 @@
   .contact-image-div {
     display: none;
   }
+.contact-text-div .contact-number {
+  color: #000000 !important;
+  font-weight: 700;
+  font-size: 2.8rem;
+  margin: 1rem 0;
+  line-height: 1.3;
+}
+
+.dark-mode .contact-text-div .contact-number {
+  color: #ffffff !important;
+}
+
 }
