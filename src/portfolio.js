@@ -177,7 +177,7 @@ const techStack = {
   experience: [
     {
       Stack: "Frontend/Design", //Insert stack or technology you have experience in
-      progressPercentage: "90%" //Insert relative proficiency in percentage
+      progressPercentage: "85%" //Insert relative proficiency in percentage
     },
     {
       Stack: "Backend",
@@ -185,7 +185,7 @@ const techStack = {
     },
     {
       Stack: "Programming",
-      progressPercentage: "75%"
+      progressPercentage: "85%"
     }
   ],
   displayCodersrank: false // Set true to display codersrank badges section need to changes your username in src/containers/skillProgress/skillProgress.js:17:62, defaults to false
@@ -438,4 +438,4 @@ export {
   isHireable,
   resumeSection
 };
-export const resumeLink = "/resume/Manjur_Kanekal_Resume.pdf";
+export const resumeLink = "pubic/resume/Manjur_Kanekal_Resume.pdf";
