@@ -1,42 +1,46 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
+import { motion } from "framer-motion";
 import "./WorkExperience.scss";
 import ExperienceCard from "../../components/experienceCard/ExperienceCard";
-import {workExperiences} from "../../portfolio";
-import {Fade} from "react-reveal";
+import { workExperiences } from "../../portfolio";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function WorkExperience() {
-  const {isDark} = useContext(StyleContext);
-  if (workExperiences.display) {
-    return (
-      <div id="experience">
-        <Fade bottom duration={1000} distance="20px">
-          <div className="experience-container" id="workExperience">
-            <div>
-              <h1 className="experience-heading">Experiences</h1>
-              <div className="experience-cards-div">
-                {workExperiences.experience.map((card, i) => {
-                  return (
-                    <ExperienceCard
-                      key={i}
-                      isDark={isDark}
-                      cardInfo={{
-                        company: card.company,
-                        desc: card.desc,
-                        date: card.date,
-                        companylogo: card.companylogo,
-                        role: card.role,
-                        descBullets: card.descBullets
-                      }}
-                    />
-                  );
-                })}
-              </div>
-            </div>
-          </div>
-        </Fade>
-      </div>
-    );
+  const { isDark } = useContext(StyleContext);
+
+  if (!workExperiences.display) {
+    return null;
   }
-  return null;
+
+  return (
+    <section id="experience">
+      <motion.div
+        initial={{ opacity: 0, y: 40 }}
+        whileInView={{ opacity: 1, y: 0 }}
+        viewport={{ once: true, amount: 0.3 }}
+        transition={{ duration: 0.8, ease: "easeOut" }}
+        className="experience-container"
+        id="workExperience"
+      >
+        <h1 className="experience-heading">Experiences</h1>
+
+        <div className="experience-cards-div">
+          {workExperiences.experience.map((card, i) => (
+            <ExperienceCard
+              key={i}
+              isDark={isDark}
+              cardInfo={{
+                company: card.company,
+                desc: card.desc,
+                date: card.date,
+                companylogo: card.companylogo,
+                role: card.role,
+                descBullets: card.descBullets
+              }}
+            />
+          ))}
+        </div>
+      </motion.div>
+    </section>
+  );
 }

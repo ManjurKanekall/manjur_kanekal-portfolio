@@ -1,18 +1,23 @@
-import React, {useContext} from "react";
+import React, { useContext } from "react";
+import { motion } from "framer-motion";
 import "./Footer.scss";
-import {Fade} from "react-reveal";
 import emoji from "react-easy-emoji";
 import StyleContext from "../../contexts/StyleContext";
 
 export default function Footer() {
-  const {isDark} = useContext(StyleContext);
+  const { isDark } = useContext(StyleContext);
+
   return (
-    <Fade bottom duration={1000} distance="5px">
-      <div className="footer-div">
-        <p className={isDark ? "dark-mode footer-text" : "footer-text"}>
-          {emoji("Made with ❤️ by Manjur Kanekal")}
-        </p>
-      </div>
-    </Fade>
+    <motion.div
+      className="footer-div"
+      initial={{ opacity: 0, y: 10 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.5, ease: "easeOut" }}
+    >
+      <p className={isDark ? "dark-mode footer-text" : "footer-text"}>
+        {emoji("Made with ❤️ by Manjur Kanekal")}
+      </p>
+    </motion.div>
   );
 }
