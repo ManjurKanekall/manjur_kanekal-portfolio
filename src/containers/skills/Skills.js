@@ -15,16 +15,17 @@ export default function Skills() {
   }
 
   return (
-    <div className={isDark ? "dark-mode main" : "main"} id="skills">
+    <motion.div
+      className={isDark ? "dark-mode main" : "main"}
+      id="skills"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
       <div className="skills-main-div">
-        {/* Left: Illustration */}
-        <motion.div
-          className="skills-image-div"
-          initial={{ opacity: 0, x: -40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
+        {/* LEFT: Image (NO animation here) */}
+        <div className="skills-image-div">
           {illustration.animated ? (
             <DisplayLottie animationData={codingPerson} />
           ) : (
@@ -33,20 +34,12 @@ export default function Skills() {
               src={require("../../assets/images/developerActivity.svg")}
             />
           )}
-        </motion.div>
+        </div>
 
-        {/* Right: Text */}
-        <motion.div
-          className="skills-text-div"
-          initial={{ opacity: 0, x: 40 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true, amount: 0.3 }}
-          transition={{ duration: 0.6, ease: "easeOut" }}
-        >
+        {/* RIGHT: Text (NO animation here) */}
+        <div className="skills-text-div">
           <h1
-            className={
-              isDark ? "dark-mode skills-heading" : "skills-heading"
-            }
+            className={isDark ? "dark-mode skills-heading" : "skills-heading"}
           >
             {skillsSection.title}
           </h1>
@@ -77,8 +70,8 @@ export default function Skills() {
               </p>
             ))}
           </div>
-        </motion.div>
+        </div>
       </div>
-    </div>
+    </motion.div>
   );
 }

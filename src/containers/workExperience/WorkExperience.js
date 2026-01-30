@@ -13,15 +13,14 @@ export default function WorkExperience() {
   }
 
   return (
-    <section id="experience">
-      <motion.div
-        initial={{ opacity: 0, y: 40 }}
-        whileInView={{ opacity: 1, y: 0 }}
-        viewport={{ once: true, amount: 0.3 }}
-        transition={{ duration: 0.8, ease: "easeOut" }}
-        className="experience-container"
-        id="workExperience"
-      >
+    <motion.div
+      id="experience"
+      initial={{ opacity: 0, y: 40 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true, amount: 0.3 }}
+      transition={{ duration: 0.6, ease: "easeOut" }}
+    >
+      <div className="experience-container" id="workExperience">
         <h1 className="experience-heading">Experiences</h1>
 
         <div className="experience-cards-div">
@@ -40,7 +39,7 @@ export default function WorkExperience() {
             />
           ))}
         </div>
-      </motion.div>
-    </section>
+      </div>
+    </motion.div>
   );
 }

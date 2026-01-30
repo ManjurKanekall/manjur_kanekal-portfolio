@@ -9,44 +9,14 @@ export default function Blogs() {
   const { isDark } = useContext(StyleContext);
   const [mediumBlogs, setMediumBlogs] = useState([]);
 
-  function setMediumBlogsFunction(array) {
-    setMediumBlogs(array);
-  }
-
-  // Medium API returns blog content in HTML format.
-  // This extracts readable text from <p> tags.
-  function extractTextContent(html) {
-    return typeof html === "string"
-      ? html
-          .split(/<\/p>/i)
-          .map(part => part.split(/<p[^>]*>/i).pop())
-          .filter(el => el.trim().length > 0)
-          .map(el => el.replace(/<\/?[^>]+(>|$)/g, "").trim())
-          .join(" ")
-      : NaN;
-  }
-
   useEffect(() => {
     if (blogSection.displayMediumBlogs === "true") {
-      const getProfileData = () => {
-        fetch("/blogs.json")
-          .then(result => {
-            if (result.ok) {
-              return result.json();
-            }
-          })
-          .then(response => {
-            setMediumBlogsFunction(response.items);
-          })
-          .catch(error => {
-            console.error(
-              `${error} (Blogs section reverted to default blogs)`
-            );
-            setMediumBlogsFunction("Error");
-            blogSection.displayMediumBlogs = "false";
-          });
-      };
-      getProfileData();
+      fetch("/blogs.json")
+        .then(res => res.ok && res.json())
+        .then(data => setMediumBlogs(data.items))
+        .catch(() => {
+          blogSection.displayMediumBlogs = "false";
+        });
     }
   }, []);
 
@@ -54,17 +24,24 @@ export default function Blogs() {
     return null;
   }
 
+  // Extract readable text from Medium HTML
+  const extractTextContent = html =>
+    typeof html === "string"
+      ? html.replace(/<\/?[^>]+(>|$)/g, "").slice(0, 250) + "..."
+      : "";
+
   return (
     <motion.div
       className="main"
       id="blogs"
-      initial={{ opacity: 0, y: 30 }}
+      initial={{ opacity: 0, y: 40 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, amount: 0.3 }}
       transition={{ duration: 0.6, ease: "easeOut" }}
     >
       <div className="blog-header">
         <h1 className="blog-header-text">{blogSection.title}</h1>
+
         <p
           className={
             isDark ? "dark-mode blog-subtitle" : "subTitle blog-subtitle"
@@ -77,7 +54,7 @@ export default function Blogs() {
       <div className="blog-main-div">
         <div className="blog-text-div">
           {blogSection.displayMediumBlogs !== "true" ||
-          mediumBlogs === "Error"
+          mediumBlogs.length === 0
             ? blogSection.blogs.map((blog, i) => (
                 <BlogCard
                   key={i}
